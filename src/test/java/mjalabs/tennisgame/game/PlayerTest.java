@@ -121,7 +121,6 @@ class PlayerTest {
 
   @Test
   void isForty_scoreIsNotForty_shouldReturnFalse() {
-    when(currentState.getScore()).thenReturn(Score.FIFTEEN);
     when(currentState.getScore()).thenReturn(Score.LOVE);
 
     boolean result = player.isForty();
@@ -140,7 +139,6 @@ class PlayerTest {
 
   @Test
   void hasAdvantage_scoreIsNotAdvantage_shouldReturnFalse() {
-    when(currentState.getScore()).thenReturn(Score.FORTY);
     when(currentState.getScore()).thenReturn(Score.LOVE);
 
     boolean result = player.hasAdvantage();
@@ -159,7 +157,6 @@ class PlayerTest {
 
   @Test
   void isDeuce_scoreIsNotDeuce_shouldReturnFalse() {
-    when(currentState.getScore()).thenReturn(Score.FORTY);
     when(currentState.getScore()).thenReturn(Score.LOVE);
 
     boolean result = player.isDeuce();
